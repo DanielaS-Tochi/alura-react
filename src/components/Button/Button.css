@@ -1,0 +1,17 @@
+.button {
+  background-color: rgb(37, 206, 60);
+  font-family: "Montserrat", "sans-serif";
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 24px 32px;
+  border: none;
+  color: aliceblue;
+  margin: 32px 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: rgb(13, 14, 10);
+  font-size: large;
+}
