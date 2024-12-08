@@ -24,6 +24,7 @@ const Formulario = () => {
     };
     console.log(datosAEnviar);
   };
+
   //cuando trabajamos con React los eventos siguen la estructura de
   //camelCase es decir, si el evento en HTML se llama onclick en React será
   //onClick
