@@ -5,13 +5,26 @@ import ListaOpciones from "../ListaOpciones";
 import Button from "../Button";
 
 const Formulario = () => {
+  const envioControl = (e) => {
+    e.preventDefault();
+    //Con esto no se recarga la página luego de clickear el botón Crear. La e viene de evento, se le puede dar el nombre que se quiera, pero es común usar e.
+    console.log("Controlar el Envio", e);
+  };
+
+  //cuando trabajamos con React los eventos siguen la estructura de
+  //camelCase es decir, si el evento en HTML se llama onclick en React será
+  //onClick
   return (
     <section className="formulario">
-      <form>
+      <form onSubmit={envioControl}>
         <h2>Completa el formulario para crear el colaborador</h2>
-        <CampoTexto titulo="Nombre" placeholder="Ingresar nombre" />
-        <CampoTexto titulo="Puesto" placeholder="Ingresar puesto" />
-        <CampoTexto titulo="Foto" placeholder="Ingresar enlace de foto" />
+        <CampoTexto titulo="Nombre" placeholder="Ingresar nombre" required />
+        <CampoTexto titulo="Puesto" placeholder="Ingresar puesto" required />
+        <CampoTexto
+          titulo="Foto"
+          placeholder="Ingresar enlace de foto"
+          required
+        />
         <ListaOpciones />
         <Button>Crear</Button>
       </form>
@@ -20,3 +33,6 @@ const Formulario = () => {
 };
 
 export default Formulario;
+
+// Notes:
+//Si usamos required o required={true}
