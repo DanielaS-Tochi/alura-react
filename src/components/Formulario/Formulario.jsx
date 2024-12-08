@@ -14,7 +14,7 @@ const Formulario = () => {
   const envioControl = (e) => {
     e.preventDefault();
     //Con esto no se recarga la página luego de clickear el botón Crear. La e viene de evento, se le puede dar el nombre que se quiera, pero es común usar e.
-    console.log("Controlar el Envio");
+    // console.log("Controlar el Envio");
 
     let datosAEnviar = {
       nombre,
