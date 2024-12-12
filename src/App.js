@@ -13,7 +13,49 @@ function App() {
     nombre: "Daniela",
     puesto: "estudiante",
     foto: "https://github.com/DanielaS-Tochi.png",
+    equipo: "UX y Diseño"
+  },
+  {
+
+    nombre: "Daniela",
+    puesto: "estudiante",
+    foto: "https://github.com/DanielaS-Tochi.png",
+    equipo: "Front End"
+  },
+  {
+
+    nombre: "Daniela",
+    puesto: "estudiante",
+    foto: "https://github.com/DanielaS-Tochi.png",
+    equipo: "Front End"
+  },
+  {
+
+    nombre: "Daniela",
+    puesto: "estudiante",
+    foto: "https://github.com/DanielaS-Tochi.png",
+    equipo: "Programación"
+  },
+  {
+
+    nombre: "Daniela",
+    puesto: "estudiante",
+    foto: "https://github.com/DanielaS-Tochi.png",
+    equipo: "DevOps"
+  },
+  {
+
+    nombre: "Daniela",
+    puesto: "estudiante",
+    foto: "https://github.com/DanielaS-Tochi.png",
     equipo: "Móvil"
+  },
+  {
+
+    nombre: "Daniela",
+    puesto: "estudiante",
+    foto: "https://github.com/DanielaS-Tochi.png",
+    equipo: "Innovación y Gestión"
   }])
 
   //Ternario --> condición ? seMuestra : noSeMuestra
@@ -28,6 +70,11 @@ function App() {
     console.log("Nuevo colaborador: ", colaborador)
     //Spread operator (... estos ... significan una copia, estamos copiando algo)
     setColaboradores([...colaboradores, colaborador])
+  }
+
+  //Eliminar colaborador
+  const eliminarColaborador = () => {
+    console.log("Eliminar colaborador")
   }
 
   // Lista de Equipos
@@ -100,6 +147,7 @@ function App() {
             key={equipo.titulo}
             //Key es un valor único
             colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)}
+            eliminarColaborador={eliminarColaborador}
           />
         )
       }
