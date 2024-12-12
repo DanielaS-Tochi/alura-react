@@ -11,6 +11,9 @@ const Formulario = (props) => {
   const [foto, setFoto] = useState("");
   const [equipo, setEquipo] = useState("");
 
+  const { registrarColaborador } = props;
+  //de esta forma se puede evitar usar tanto props, queda un código más limpio
+
   const envioControl = (e) => {
     e.preventDefault();
     //Con esto no se recarga la página luego de clickear el botón Crear. La e viene de evento, se le puede dar el nombre que se quiera, pero es común usar e.
@@ -22,7 +25,7 @@ const Formulario = (props) => {
       foto,
       equipo,
     };
-    console.log(datosAEnviar);
+    registrarColaborador(datosAEnviar);
   };
 
   //cuando trabajamos con React los eventos siguen la estructura de
