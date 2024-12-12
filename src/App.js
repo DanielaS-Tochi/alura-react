@@ -4,10 +4,17 @@ import Formulario from './components/Formulario/Formulario.jsx';
 import Header from './components/Header/Header.jsx';
 import MiOrg from './components/MiOrg/index.jsx';
 import Equipo from './components/Equipo/Equipo.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(false)
-  const [colaboradores, setColaboradores] = useState([])
+  const [colaboradores, setColaboradores] = useState([{
+
+    nombre: "Daniela",
+    puesto: "estudiante",
+    foto: "https://github.com/DanielaS-Tochi.png",
+    equipo: "Móvil"
+  }])
 
   //Ternario --> condición ? seMuestra : noSeMuestra
   // condición --> && seMuestra
@@ -96,6 +103,7 @@ function App() {
           />
         )
       }
+      <Footer />
     </div>
   );
 }
