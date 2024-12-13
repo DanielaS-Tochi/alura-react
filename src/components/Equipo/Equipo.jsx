@@ -10,7 +10,7 @@ const Equipo = (props) => {
     backgroundColor: colorSecundario,
   };
 
-  console.log(colaboradores.length > 0);
+  //console.log(colaboradores.length > 0);
   const estiloTitulo = {
     borderColor: colorPrimario,
   };
@@ -18,6 +18,11 @@ const Equipo = (props) => {
     <>
       {colaboradores.length > 0 && (
         <section className="equipo" style={obj}>
+          <input type="color" className="input-color" value={colorSecundario}
+          onChange={(evento) => {
+            console.log(evento.target.value)
+          }} />
+
           {/* Los estilos in-line van con camel case */}
           <h3 style={estiloTitulo}>{titulo}</h3>
           <div className="colaboradores">
