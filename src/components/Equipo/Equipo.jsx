@@ -1,13 +1,14 @@
 import "./Equipo.css";
 import Colaborador from "../Colaborador/Colaborador";
+import hexToRgba from "hex-to-rgba";
 
 const Equipo = (props) => {
   //Destructuración; para no usar tanto props.
   const { colorPrimario, colorSecundario, titulo } = props.datos;
-  const { colaboradores, eliminarColaborador } = props;
+  const { colaboradores, eliminarColaborador, setColor } = props;
 
   const obj = {
-    backgroundColor: colorSecundario,
+    backgroundColor: hexToRgba(colorPrimario, 0.6)
   };
 
   //console.log(colaboradores.length > 0);
@@ -18,9 +19,11 @@ const Equipo = (props) => {
     <>
       {colaboradores.length > 0 && (
         <section className="equipo" style={obj}>
-          <input type="color" className="input-color" value={colorSecundario}
+          <input type="color" 
+          className="input-color" 
+          value={colorPrimario}
           onChange={(evento) => {
-            console.log(evento.target.value)
+            setColor(evento.target.value, titulo)
           }} />
 
           {/* Los estilos in-line van con camel case */}
