@@ -11,7 +11,10 @@ const Formulario = (props) => {
   const [foto, setFoto] = useState("");
   const [equipo, setEquipo] = useState("");
 
-  const { registrarColaborador } = props;
+  const [titulo, setTitulo] = useState("");
+  const [color, setColor] = useState("");
+
+  const { registrarColaborador, crearEquipo } = props;
   //de esta forma se puede evitar usar tanto props, queda un código más limpio
 
   const envioControl = (e) => {
@@ -27,6 +30,12 @@ const Formulario = (props) => {
     };
     registrarColaborador(datosAEnviar);
   };
+
+  const controlNuevoEquipo = (e) => {
+    e.preventDefault();
+    
+    crearEquipo({ titulo, colorPrimario: color })
+  }
 
   //cuando trabajamos con React los eventos siguen la estructura de
   //camelCase es decir, si el evento en HTML se llama onclick en React será
@@ -62,7 +71,26 @@ const Formulario = (props) => {
           equipos={props.equipos}
         />
         <Button>Crear</Button>
-      </form>
+        </form>
+
+        <form onSubmit={controlNuevoEquipo}>
+        <h2>Completa el formulario para crear el equipo</h2>
+        <CampoTexto
+          titulo="Título"
+          placeholder="Ingresar título"
+          required
+          valor={titulo}
+          setValor={setTitulo}
+        />
+        <CampoTexto
+          titulo="Color"
+          placeholder="Ingresar el color en Hex"
+          required
+          valor={color}
+          setValor={setColor}
+        />
+          <Button>Registrar equipo</Button>
+        </form>
     </section>
   );
 };
