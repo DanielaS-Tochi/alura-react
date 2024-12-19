@@ -4,7 +4,8 @@ import hexToRgba from "hex-to-rgba";
 
 const Equipo = (props) => {
   //Destructuración; para no usar tanto props.
-  const { colorPrimario, colorSecundario, titulo, id } = props.datos;
+  //Aquí eliminé colorSecundario (porque creo que no lo estábamos usando)
+  const { colorPrimario, titulo, id } = props.datos;
   const { colaboradores, eliminarColaborador, setColor } = props;
 
   const obj = {

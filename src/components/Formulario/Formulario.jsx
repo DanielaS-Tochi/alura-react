@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Formulario.css";
-import CampoTexto from "../CampoTexto";
+import Campo from "../Campo";
 // Aquí iría index.jsx pero no es necesario colocar el nombre del archivo, lo toma por defecto
 import ListaOpciones from "../ListaOpciones";
 import Button from "../Button";
@@ -44,21 +44,21 @@ const Formulario = (props) => {
     <section className="formulario">
       <form onSubmit={envioControl}>
         <h2>Completa el formulario para crear el colaborador</h2>
-        <CampoTexto
+        <Campo
           titulo="Nombre"
           placeholder="Ingresar nombre"
           required
           valor={nombre}
           setValor={setNombre}
         />
-        <CampoTexto
+        <Campo
           titulo="Puesto"
           placeholder="Ingresar puesto"
           required
           valor={puesto}
           setValor={setPuesto}
         />
-        <CampoTexto
+        <Campo
           titulo="Foto"
           placeholder="Ingresar enlace de foto"
           required
@@ -75,19 +75,20 @@ const Formulario = (props) => {
 
         <form onSubmit={controlNuevoEquipo}>
         <h2>Completa el formulario para crear el equipo</h2>
-        <CampoTexto
+        <Campo
           titulo="Título"
           placeholder="Ingresar título"
           required
           valor={titulo}
           setValor={setTitulo}
         />
-        <CampoTexto
+        <Campo
           titulo="Color"
           placeholder="Ingresar el color en Hex"
           required
           valor={color}
           setValor={setColor}
+          type= "color"
         />
           <Button>Registrar equipo</Button>
         </form>
