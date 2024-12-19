@@ -6,7 +6,7 @@ const Equipo = (props) => {
   //Destructuración; para no usar tanto props.
   //Aquí eliminé colorSecundario (porque creo que no lo estábamos usando)
   const { colorPrimario, titulo, id } = props.datos;
-  const { colaboradores, eliminarColaborador, setColor } = props;
+  const { colaboradores, eliminarColaborador, setColor, like } = props;
 
   const obj = {
     backgroundColor: hexToRgba(colorPrimario, 0.6)
@@ -36,6 +36,7 @@ const Equipo = (props) => {
                 key={index}
                 colorPrimario={colorPrimario}
                 eliminarColaborador={eliminarColaborador}
+                like={like}
               />
             ))}
           </div>

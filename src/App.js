@@ -10,56 +10,63 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  const [mostrarFormulario, actualizarMostrar] = useState(true);
+  const [mostrarFormulario, actualizarMostrar] = useState(false);
   const [colaboradores, setColaboradores] = useState([
     {
       id: uuid(),
       nombre: "Daniela",
       puesto: "estudiante",
       foto: "https://github.com/DanielaS-Tochi.png",
-      equipo: "UX y Diseño"
+      equipo: "UX y Diseño",
+      fav: true
     },
     {
       id: uuid(),
       nombre: "Daniela",
       puesto: "estudiante",
       foto: "https://github.com/DanielaS-Tochi.png",
-      equipo: "Front End"
+      equipo: "Front End",
+      fav: true
     },
     {
       id: uuid(),
       nombre: "Daniela",
       puesto: "estudiante",
       foto: "https://github.com/DanielaS-Tochi.png",
-      equipo: "Front End"
+      equipo: "Front End",
+      fav: true
     },
     {
       id: uuid(),
       nombre: "Daniela",
       puesto: "estudiante",
       foto: "https://github.com/DanielaS-Tochi.png",
-      equipo: "Programación"
+      equipo: "Programación",
+      fav: true
     },
     {
       id: uuid(),
       nombre: "Daniela",
       puesto: "estudiante",
       foto: "https://github.com/DanielaS-Tochi.png",
-      equipo: "DevOps"
+      equipo: "DevOps",
+      fav: false
     },
     {
       id: uuid(),
       nombre: "Daniela",
       puesto: "estudiante",
       foto: "https://github.com/DanielaS-Tochi.png",
-      equipo: "Móvil"
+      equipo: "Móvil",
+      fav: true
     },
     {
       id: uuid(),
       nombre: "Daniela",
       puesto: "estudiante",
       foto: "https://github.com/DanielaS-Tochi.png",
-      equipo: "Innovación y Gestión"
+      equipo: "Innovación y Gestión",
+      fav: false
     }]);
 
   const [equipos, setEquipos] = useState([
@@ -138,7 +145,17 @@ function App() {
     setEquipos([...equipos, { ...nuevoEquipo, id: uuid() }]);
   }
 
+  const like = (id) => {
+    console.log("Like", id)
+    const colaboradoresActualizados = colaboradores.map((colaborador) => {
+      if (colaborador.id === id) {
+        colaborador.fav = !colaborador.fav
+      }
+      return colaborador
+    })
 
+    setColaboradores(colaboradoresActualizados)
+  }
   return (
     <div>
       <Header />
@@ -160,6 +177,7 @@ function App() {
           colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)}
           eliminarColaborador={eliminarColaborador}
           setColor={setColor}
+          like={like}
         />
       )}
       <Footer />
