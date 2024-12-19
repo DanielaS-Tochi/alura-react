@@ -6,6 +6,8 @@ import Header from './components/Header/Header.jsx';
 import MiOrg from './components/MiOrg/index.jsx';
 import Equipo from './components/Equipo/Equipo.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(true);
@@ -140,6 +142,7 @@ function App() {
   return (
     <div>
       <Header />
+      <ToastContainer />
       {mostrarFormulario && (
         <Formulario
           equipos={equipos.map((equipo) => equipo.titulo)}

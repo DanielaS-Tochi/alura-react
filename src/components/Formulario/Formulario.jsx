@@ -4,6 +4,7 @@ import Campo from "../Campo";
 // Aquí iría index.jsx pero no es necesario colocar el nombre del archivo, lo toma por defecto
 import ListaOpciones from "../ListaOpciones";
 import Button from "../Button";
+import { toast } from 'react-toastify'; 
 
 const Formulario = (props) => {
   const [nombre, setNombre] = useState("");
@@ -29,14 +30,18 @@ const Formulario = (props) => {
       equipo,
     };
     registrarColaborador(datosAEnviar);
-  };
+  
+
+toast.success('Colaborador creado con éxito!');
+  };  
 
   const controlNuevoEquipo = (e) => {
     e.preventDefault();
     
     crearEquipo({ titulo, colorPrimario: color })
-  }
-
+  
+ toast.success('Equipo creado con éxito!');
+  };
   //cuando trabajamos con React los eventos siguen la estructura de
   //camelCase es decir, si el evento en HTML se llama onclick en React será
   //onClick
