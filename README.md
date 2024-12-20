@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Proyecto de Creación de Equipos con React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación web desarrollada con React para crear y gestionar equipos de trabajo, con la opción de agregar colaboradores a dichos equipos.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+***Creación de equipos:** Permite a los usuarios crear nuevos equipos, especificando un nombre y un color primario.
+***Creación de colaboradores:** Permite a los usuarios agregar nuevos colaboradores, indicando su nombre, puesto, foto y equipo al que pertenecen.
+***Listado de equipos:** Muestra una lista de los equipos creados, con la opción de ver los colaboradores de cada equipo.
+***Listado de colaboradores:** Muestra una lista de todos los colaboradores, con la opción de eliminarlos.
+***Notificaciones:** Utiliza la librería `react-toastify` para mostrar notificaciones de éxito al crear un nuevo equipo o colaborador.
 
-### `npm start`
+## Tecnologías Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+***React:** Framework de JavaScript para construir interfaces de usuario.
+***React Router DOM:** Librería para la navegación entre componentes.
+***UUID:** Librería para generar identificadores únicos.
+***React Toastify:** Librería para mostrar notificaciones.
+***CSS Modules:** Módulos de CSS para el manejo de estilos.
+***Vercel:** Plataforma para el deploy del proyecto.
+***Gemini 2.0 Experimental:** Versión experimental de Gemini 2.0, realización del README.md.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalación
 
-### `npm test`
+1. Clona el repositorio:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone https://github.com/DanielaS-Tochi/alura-react
+    ```
 
-### `npm run build`
+2. Navega al directorio del proyecto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    cd [nombre del directorio del proyecto]
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Instala las dependencias:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+## Ejecución
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para ejecutar el proyecto en modo desarrollo:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+La aplicación estará disponible en http://localhost:3000.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Despliegue
+Este proyecto fue desplegado usando Vercel. 
+url: https://alura-react-liart.vercel.app/
 
-## Learn More
+Notas Importantes
+Los cambios en el código después del deploy se actualizan automáticamente en la URL.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Los estilos se gestionan con módulos de CSS.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Se han implementado notificaciones para una mejor experiencia de usuario.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Créditos
+Proyecto desarrollado por Daniela Silvana Tochi
+Instructor guía Harland Lohora
