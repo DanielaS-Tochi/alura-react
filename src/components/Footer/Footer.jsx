@@ -18,10 +18,10 @@ const Footer = () => {
         href="https://www.instagram.com/danitochicode/" 
         target="_blank"
         rel="noopener noreferrer">
-   <img src="/img/instagram.png" alt="instagram" />
- </a>
+        <img src="/img/instagram.png" alt="instagram" />
+        </a>
       </div>
-      <img
+        <img
         src="/img/daniela-silvana-tochi.jpg"
         alt="Daniela"
         className="img-logo"
