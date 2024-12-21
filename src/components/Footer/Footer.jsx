@@ -7,10 +7,6 @@ const Footer = () => {
       style={{ backgroundImage: "url(/img/footer.png)" }}
     >
       <div className="redes">
-        {/* <a href="https://www.aluracursos.com/">
-          <img src="/img/facebook.png" alt="Facebook" /> */}
-        {/* </a> */}
-
         <a
           href="https://x.com/DaniTochiCode/"
           target="_blank"
@@ -18,13 +14,12 @@ const Footer = () => {
         >
           <img src="/img/twitter.png" alt="twitter" />
         </a>
-        <a
-          href="https://www.instagram.com/danitochicode/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/img/instagram.png" alt="instagram" />
-        </a>
+        <a 
+        href="https://www.instagram.com/danitochicode/" 
+        target="_blank"
+        rel="noopener noreferrer">
+   <img src="/img/instagram.png" alt="instagram" />
+ </a>
       </div>
       <img
         src="/img/daniela-silvana-tochi.jpg"
